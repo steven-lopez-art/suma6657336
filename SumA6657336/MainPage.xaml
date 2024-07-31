@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:SumA6657336.ViewModels"
+             x:Class="SumA6657336.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+           Text="SUMA DOS NÚMEROS"
+           Padding="10"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+            <Label
+          Text="Ingrese un número:"
+          Margin="5"/>
+
+            <Entry
+          Text="{Binding Entry1}"
+          Margin="5"/>
+
+            <Label
+          Text="Ingrese un número:"
+          Margin="5"/>
+
+            <Entry
+          Text="{Binding Entry2}"
+          Margin="5"/>
+
+            <Button
+          Text="Sumar"
+          x:Name="BtnSum"
+          Margin="5"
+          Command="{Binding calcularCommand}"/>
+
+            <Label
+          Text="Resultado de la suma:"
+          Margin="5"/>
+
+            <Entry
+            Text="{Binding Entry3}"
+            Margin="5"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
